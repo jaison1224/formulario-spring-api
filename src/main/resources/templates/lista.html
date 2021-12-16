@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lista de empregos</title>
+</head>
+<body>
+<h1>Formulario de emprego</h1>
+<a href="/add">Adicionar um novo  emprego</a><br>
+
+<div class="header" th:each="emprego : ${empregos}">
+	<h4 th:inline="text"> [[${emprego.titulo}]] na [[${emprego.empresa}]] </h4>
+	<p th:text="${emprego.descricao}"></p>
+</div>
+</body>
+</html>
